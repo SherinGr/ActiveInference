@@ -1,24 +1,32 @@
 function F = freeEnergy(mu,y,agent)
-%% Evaluate current Informational Free Energy (IFE)
-% Extract required variables 
-Atilde = agent.Atilde;
-Ctilde = agent.Ctilde;
-D      = agent.Der;
+%% Evaluate the Free Energy
+%
+% @author : Sherin Grimbergen <s.s.grimbergen@student.tudelft.nl>
+% date:     22-06-2018
+%
+% INPUTS:
+% mu        = Generalized state estimation sequence
+% y         = Measurement sequence
+% agent     = Structure containing all variables of the agent
+%
+% OUTPUTS:
+% F         = Values of the free energy
+
+%% Extract required variables 
+Atilde = agent.A;
+Ctilde = agent.C;
+D      = agent.D;
 Piz    = agent.Piz;
 Piw    = agent.Piw;
-x_eq   = agent.x_eq;
-p      = agent.p;
+xi     = agent.xi;
 
-% Calculate the Free Energy
-N = size(y,2); % number of timepoints
-F = NaN(1,N);  % initialize vector
-
-n = numel(x_eq);
-xi = -Atilde*[x_eq; zeros(n*p,1)];
+%% Calculate the Free Energy
+N = max(size(y)); % number of timepoints (ugly, fails when dim(y)>N)
+F = NaN(1,N);     % initialize free energy vector
 
 for i = 1:N
 F(i) = 0.5*((y(:,i)-Ctilde*mu(:,i)).'*Piz*(y(:,i)-Ctilde*mu(:,i)) + ...
-    (D*mu(:,i)-Atilde*mu(:,i)-xi).'*Piw*(D*mu(:,i)-Atilde*mu(:,i)-xi));
+    (D*mu(:,i)-Atilde*mu(:,i)-xi(:,i)).'*Piw*(D*mu(:,i)-Atilde*mu(:,i)-xi(:,i)));
 end
 
 end
