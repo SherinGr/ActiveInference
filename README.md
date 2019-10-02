@@ -1,7 +1,7 @@
 # Active Inference for Robotics
 
 **Note:**
-This readme will be elaborated once the code has been committed.
+I stopped working on this project, the code is not updated anymore and might not work properly!
 
 ## Description
 Active Inference, a result of the Free-Energy principle, has been proposed by K. Friston to explain perception and action in the same framework. There have been only a few attempts to implement active inference for control in robotics. This project will focus on implementing Active Inference for robotic systems. The idea is to increase complexity of controlled systems over the course of time. We will also study the relation between Active Inference and existing algorithms, specifically uncovering the benefits of generalised motions. 
