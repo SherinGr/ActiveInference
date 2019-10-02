@@ -9,6 +9,8 @@ the assumption of Markovian noise and a linear system. The two algorithms should
 according to Friston (I believe) be equal. If this simulation shows that, there
 must be a mathematical proof for this.
 
+SIMULATION IS NOT FINISHED
+
 """
 
 import numpy as np
