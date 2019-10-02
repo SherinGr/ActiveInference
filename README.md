@@ -1,6 +1,6 @@
 # Active Inference for Robotics
 
-**Note:**
+**!!Note!!**
 I stopped working on this project, the code is not updated anymore and might not work properly!
 
 ## Description
@@ -66,7 +66,7 @@ In here *system* is a state space model as can be obtained from `scipy.linalg.St
 ## References
 - First Active Inference paper by Friston et al.: [link](https://doi.org/10.1007/s00422-010-0364-z)
 - Tutorial on Free Energy Principle by Bogazc: [link](https://doi.org/10.1016/j.jmp.2015.11.003)
-- Tutorial on Active Inference by Grimbergen et al.: [link](http://dx.doi.org/10.1098/rsif.2016.0616)
+- Tutorial on Active Inference by Grimbergen et al.: (in preparation)
 
 <!--
 ### Usefull semantics:
