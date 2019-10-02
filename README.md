@@ -8,7 +8,7 @@ Active Inference, a result of the Free-Energy principle, has been proposed by K.
 
 This project is part of the research line on Prediction Error Minimisation lead by Prof. dr. ir. Martijn Wisse to apply Active Inference in robotics.
 
-Project contact: Sherin Grimbergen (s.s.grimbergen@tudelft.nl)
+Project contact: Sherin Grimbergen (sheringrimbergen@hotmail.com)
 
 
 ### Keywords
